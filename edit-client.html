@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM Manager</title>
+    <link rel="stylesheet" href="./public/style.css">
+</head>
+<body>
+    <aside>
+        <h1>CRM - Indexed DB</h1>
+        <p>Manage your clients with CRM - Indexed DB</p>
+        <nav>
+            <a class="option secondary" href="index.html">Clients</a>
+            <a class="option main" href="new-client.html">Edit Client</a>
+        </nav>
+    </aside>
+
+    <main>
+        <h1 class="title">Edit Client</h1>
+        <form action="#" id="form">
+            <div class="field">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Client's Name">
+            </div>
+            <div class="field">
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" placeholder="Client's Email">
+            </div>
+            <div class="field">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address" placeholder="Client's Address">
+            </div>
+            <div class="field">
+                <label for="zipcode">Zipcode</label>
+                <input type="text" id="zipcode" name="zipcode" placeholder="Client's Zipcode">
+            </div>
+            <div class="field">
+                <label for="phone">Telephone</label>
+                <input type="text" id="phone" name="phone" placeholder="Client's Telephone">
+            </div>
+            <input type="submit" value="Save Changes">
+        </form>
+    </main>
+    <script type="module" src="./js/edit-client.js"></script>
+</body>
+</html>

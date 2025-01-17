@@ -1,0 +1,271 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+p, h1, a, table {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* -------------------------------------------------- Sidebar Customization --------------------------------------------------*/
+
+aside {
+    background-image: linear-gradient(to bottom, rgb(15, 131, 92) 0%, rgb(16, 180, 126) 100%);
+    height: 100vh;
+    width: 20%;
+
+    padding: 4rem 2rem 0 2rem;
+
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    color: white;
+}
+
+aside h1 {
+    font-weight: bold;
+    font-size: 1.9rem;
+}
+
+aside p {
+    font-size: 1.1rem;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+nav a {
+    color: white;
+    padding: 0.5rem 0 0.5rem 0.8rem;
+}
+
+.option:hover {
+    color: yellow;
+}
+
+.main {
+    background-color: rgb(13, 114, 80);
+}
+
+.secondary:hover {
+    background-color: rgb(9, 89, 62);
+}
+
+/* -------------------------------------------------- Main Body Customization --------------------------------------------------*/
+
+main {
+    background-color: rgba(16, 180, 125, 0.075);
+    height: auto;
+    width: 80%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 4rem 2rem 0 2rem;
+}
+
+main h1 {
+    font-weight: 100;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: separate;
+    border-radius: 10px;
+    overflow: hidden;
+    table-layout: fixed;
+    box-shadow: 2px 2px 5px rgb(183, 183, 183);
+}
+
+thead {
+    background-color: rgb(216, 230, 226);
+}
+
+tbody {
+    background-color: rgb(255, 255, 255);
+}
+
+th, td {
+    padding: 0.5rem;
+    word-wrap: break-word; /* Ensures long content wraps within cells */
+    border: 1px solid transparent; /* Default border to align with rows */
+    text-align: center;
+}
+
+tbody tr:not(:last-child) td {
+    border-bottom: 2px solid rgba(16, 180, 125, 0.075); /* Adds a horizontal line between rows */
+}
+
+.client-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.client-address {
+    font-weight: bold;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    /* margin-bottom: 0.9rem; */
+}
+
+.buttons a {
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.edit > a {
+    color: rgb(15, 157, 110);
+}
+
+.edit > a:hover {
+    color: rgb(8, 87, 61);
+}
+
+.delete > a {
+    color: red;
+}
+
+.delete > a:hover {
+    color: rgb(168, 0, 0);
+}
+
+/* -------------------------------------------------- Form Customization --------------------------------------------------*/
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+
+    padding: 1rem;
+    width: 50%;
+    background-color: white;
+    box-shadow: 2px 2px 5px rgb(183, 183, 183);
+    border-radius: 10px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+label {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: rgba(0, 0, 0, 0.751);
+}
+
+input {
+    height: 2rem; /* Adjusts the height of the input field */
+    font-size: 1.1rem; /* Ensures the font size for both text and placeholder */
+    line-height: normal; /* Ensures vertical alignment of text */
+    border-radius: 0.25rem; /* Rounds corners */
+    border-width: 1px; /* Border thickness */
+    border-color: rgba(0, 0, 0, 0.259); /* Border color */
+    padding: 1rem 0 1rem 0.75rem; /* Space between text and input box edge */
+    box-sizing: border-box; /* Includes padding and border in the height calculation */
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.259); /* Placeholder text color */
+    font-size: 1.1rem; /* Matches input text font size */
+    line-height: normal; /* Ensures placeholder vertical alignment */
+}
+
+input:focus {
+    border: 3px solid rgb(16, 180, 126);
+    outline: none;
+}
+
+input[type="submit"] {
+    background-color: rgb(15, 131, 92);
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem 0 0.5rem 0;
+    height: fit-content;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+input[type="submit"]:hover {
+    background-color: rgb(10, 90, 63);
+}
+
+/* -------------------------------------------------- Alert Customization --------------------------------------------------*/
+
+.alert {
+    text-align: center;
+    padding: 0.4rem;
+    border-radius: 0.25rem;
+}
+
+.error {
+    background-color: rgba(255, 0, 0, 0.147);
+    border: 1px solid rgb(191, 0, 0);
+    color: rgb(191, 0, 0);
+}
+
+.success {
+    background-color: rgba(0, 128, 0, 0.199);
+    border: 1px solid green;
+    color: green;
+}
+
+/* -------------------------------------------------- Media Customization --------------------------------------------------*/
+
+@media (max-width: 700px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside {
+        height: fit-content;
+        width: auto;
+        padding: 2rem;
+    }
+
+    aside h1 {
+        text-align: center;
+    }
+
+    aside p {
+        text-align: center;
+    }
+
+    main {
+        height: fit-content;
+        width: auto;
+        padding: 2rem 2rem 3rem 2rem;
+    }
+
+    td > *:not(:last-child) {
+        margin-bottom: 1rem;
+    }
+
+    form {
+        width: 90%;
+    }
+}
